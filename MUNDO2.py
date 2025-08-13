@@ -44,20 +44,27 @@
 #     print('Nao existe numero maior, os dois sao iguais')
 
 
-#DESAFIO:  Faça um programa que leia o ano de nascimento de um jovem e informe, de acordo com a sua idade, se ele ainda vai se alistar ao serviço militar, se é a hora exata de se alistar ou se já passou do tempo do alistamento. Seu programa também deverá mostrar o tempo que falta ou que passou do prazo.    
-from datetime import date
+#DESAFIO: 
+# ano_atual = date.today().year
+# data_nasc = int(input('Coloque seu ano de nascimento: '))
 
-ano_atual = date.today().year
-data_nasc = int(input('Coloque seu ano de nascimento: '))
+# idade = ano_atual - data_nasc
+# ano_alistamento = data_nasc + 18
 
-idade = ano_atual - data_nasc
-ano_alistamento = data_nasc + 18
+# if idade > 18:
+#     atraso = idade - 18
+#     print(f'Você precisa se alistar! Passou {atraso} ano(s) do prazo.')
+# elif idade == 18:
+#     print('Você precisa se alistar este ano!')
+# else:
+#     falta = 18 - idade
+#     print(f'Você ainda não precisa se alistar. Faltam {falta} ano(s).')
 
-if idade > 18:
-    atraso = idade - 18
-    print(f'Você precisa se alistar! Passou {atraso} ano(s) do prazo.')
-elif idade == 18:
-    print('Você precisa se alistar este ano!')
-else:
-    falta = 18 - idade
-    print(f'Você ainda não precisa se alistar. Faltam {falta} ano(s).')
+
+#DESAFIO: Crie um programa que leia duas notas de um aluno e calcule sua média, mostrando uma mensagem no final, de acordo com a média atingida:
+nota1 = float(input('Coloque a nota: '))
+nota2 = float(input('Coloque a 2 nota: '))
+media = (nota1 + nota2) / 2
+if media >= 6:
+    print(f'Você tirou {media}, uma nota aceitavel, Parabens')
+else: print(f'Você tirou {media}, uma nota abaixo da media.')
