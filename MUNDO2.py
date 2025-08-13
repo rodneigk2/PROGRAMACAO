@@ -61,3 +61,5 @@ elif idade == 18:
 else:
     falta = 18 - idade
     print(f'Você ainda não precisa se alistar. Faltam {falta} ano(s).')
+
+print
