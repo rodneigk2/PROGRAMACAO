@@ -68,3 +68,26 @@
 # if media >= 6:
 #     print(f'Você tirou {media}, uma nota aceitavel, Parabens')
 # else: print(f'Você tirou {media}, uma nota abaixo da media.')
+
+
+#DESAFIO: 
+# from datetime import date
+# ano_atual = date.today().year
+# ano = int(input('Coloque seu ano de nascimento: '))
+# data = ano_atual - ano
+# idade = data
+# if idade <= 9:
+#     print(f'Você é da categoria mirin, por ter {idade} anos')
+# elif idade <= 14:
+#     print(f'Você é da categoria infantil, por ter {idade} anos')
+# elif idade <= 19:
+#     print(f'Você é da categoria junior, por ter {idade} anos')
+# elif idade <= 25:
+#     print(f'Você é da categoria senior, por ter {idade} anos')
+# else:
+#     print(f'Você é da categoria master tem mais de 25 anos, idade: {idade} anos')
+
+
+Exercício Python 42: Refaça o DESAFIO 35 dos triângulos, acrescentando o recurso de mostrar que tipo de triângulo será formado: – EQUILÁTERO: todos os lados iguais – ISÓSCELES: dois lados iguais, um diferente – ESCALENO: todos os lados diferentes
+
+
