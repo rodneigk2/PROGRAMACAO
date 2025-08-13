@@ -61,10 +61,10 @@
 #     print(f'Você ainda não precisa se alistar. Faltam {falta} ano(s).')
 
 
-#DESAFIO: Crie um programa que leia duas notas de um aluno e calcule sua média, mostrando uma mensagem no final, de acordo com a média atingida:
-nota1 = float(input('Coloque a nota: '))
-nota2 = float(input('Coloque a 2 nota: '))
-media = (nota1 + nota2) / 2
-if media >= 6:
-    print(f'Você tirou {media}, uma nota aceitavel, Parabens')
-else: print(f'Você tirou {media}, uma nota abaixo da media.')
+#DESAFIO:
+# nota1 = float(input('Coloque a nota: '))
+# nota2 = float(input('Coloque a 2 nota: '))
+# media = (nota1 + nota2) / 2
+# if media >= 6:
+#     print(f'Você tirou {media}, uma nota aceitavel, Parabens')
+# else: print(f'Você tirou {media}, uma nota abaixo da media.')
