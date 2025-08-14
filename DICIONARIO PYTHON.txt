@@ -1,23 +1,23 @@
 TIPOS PRIMITIVOS:
-- int(): converte valores para número inteiro. Exemplos: 7, -4, 0, 9875
-- float(): converte valores para número real (ponto flutuante). Exemplos: 4.5, 0.076, -15.223, 7.0
-- bool(): converte valores para booleano (True ou False). Útil para verificar condições lógicas. Exemplos: 0, '', None resultam em False; outros valores resultam em True.
-- str(): converte valores para string (texto). Exemplos: 'olá', '7', '4.0'
-- end = ' ': Não deixa a linha quebrar para a debaixo.
-- \n : faz a quebra para a linha de baixo.
-- max = mostra o valor mais alto dentro duma tupla
-- min = mostra o valor mais baixo dentro duma tupla
+- int(): → converte valores para número inteiro. Exemplos: 7, -4, 0, 9875
+- float(): → converte valores para número real (ponto flutuante). Exemplos: 4.5, 0.076, -15.223, 7.0
+- bool(): → converte valores para booleano (True ou False). Útil para verificar condições lógicas. Exemplos: 0, '', None resultam em False; outros valores resultam em True.
+- str(): → converte valores para string (texto). Exemplos: 'olá', '7', '4.0'
+- end = ' ': → Não deixa a linha quebrar para a debaixo.
+- \n: → faz a quebra para a linha de baixo.
+- max: → mostra o valor mais alto dentro duma tupla
+- min: → mostra o valor mais baixo dentro duma tupla
 
 ==============================================================
 TIPOS E MÉTODOS DE VARIÁVEIS
 - type(): mostra o tipo da variável.
-- .isnumeric(): verifica se a string contém apenas números.
-- .isdigit(): verifica se a string contém apenas dígitos (números inteiros).
-- .isalpha(): verifica se a string contém apenas letras.
-- .isalnum(): verifica se a string contém apenas letras e/ou números.
-- .islower(): verifica se a string está em minúsculas.
-- .isupper(): verifica se a string está em maiúsculas.
-- .isspace(): verifica se a string contém apenas espaços em branco.
+- .isnumeric(): → verifica se a string contém apenas números.
+- .isdigit(): → verifica se a string contém apenas dígitos (números inteiros).
+- .isalpha(): → verifica se a string contém apenas letras.
+- .isalnum(): → verifica se a string contém apenas letras e/ou números.
+- .islower(): → verifica se a string está em minúsculas.
+- .isupper(): → verifica se a string está em maiúsculas.
+- .isspace(): → verifica se a string contém apenas espaços em branco.
 
 ==============================================================
 OPERADORES ARITMÉTICOS
@@ -38,17 +38,17 @@ ORDEM DE PRECEDÊNCIA DOS OPERADORES
 
 ==============================================================
 IMPORTACAO DE BIBLIOTECAS
-import = importa as BIBLIOTECAS
-From = escolhe um 'iten' da biblioteca
+import: → importa as BIBLIOTECAS
+From: → escolhe um 'iten' da biblioteca
 
 ==============================================================
 VARIAS FUNCOES EM 1 IF
-and = todas as condições precisam ser verdadeiras para o resultado ser verdadeiro.
-or = basta uma das condições ser verdadeira para o resultado ser verdadeiro, posso especificar quais quero com ().
+and: → todas as condições precisam ser verdadeiras para o resultado ser verdadeiro.
+or: → basta uma das condições ser verdadeira para o resultado ser verdadeiro, posso especificar quais quero com ().
 
 ==============================================================
 FUNCAO MATCH E CASE
 match "variavel": → Indica qual variável vai ser analisada.
 case padrão: → "caso" não for uma opcâo, vai ser a outra, até achar um com que ela case.
 case _: → Pega qualquer valor que não casou com os anteriores (default).
- _ : É como se fosse um else.
+ _ : → É como se fosse um else.
