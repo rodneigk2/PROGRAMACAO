@@ -40,3 +40,15 @@
 #              ^ (acento circunflexo) centraliza o texto.
 #              = (igual) preenche os espaços vazios com o caracter =;
 #             Você pode trocar o '=' por qualquer outro caracter, como *, -, #, etc.
+
+
+
+# valor = int(input('coloque o valor'))
+# match valor:
+#     case x if x < 5:  (Pode se ultilizar qualquer palavra para receber a variavel VALOR depois do case.)
+#         print("Menor que 5")
+#     case x if x < 10:
+#         print("Entre 5 e 9")
+#     case _:
+#         print("10 ou mais")
+     
