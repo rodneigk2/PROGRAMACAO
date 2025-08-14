@@ -33,7 +33,7 @@
 #     print('Numero não identificado! Tente novamente com uma das escolhas acima...')
 
 
-#DESAFIO: 
+#DESAFIO 38: 
 # numero1 = int(input('Coloque um numero:  '))
 # numero2 = int(input('Coloque outro: '))
 # if numero1 > numero2: 
@@ -44,7 +44,7 @@
 #     print('Nao existe numero maior, os dois sao iguais')
 
 
-#DESAFIO: 
+#DESAFIO 39: 
 # ano_atual = date.today().year
 # data_nasc = int(input('Coloque seu ano de nascimento: '))
 
@@ -61,7 +61,7 @@
 #     print(f'Você ainda não precisa se alistar. Faltam {falta} ano(s).')
 
 
-#DESAFIO:
+#DESAFIO 40:
 # nota1 = float(input('Coloque a nota: '))
 # nota2 = float(input('Coloque a 2 nota: '))
 # media = (nota1 + nota2) / 2
@@ -70,7 +70,7 @@
 # else: print(f'Você tirou {media}, uma nota abaixo da media.')
 
 
-#DESAFIO: 
+#DESAFIO 41: 
 # from datetime import date
 # ano_atual = date.today().year
 # ano = int(input('Coloque seu ano de nascimento: '))
@@ -89,22 +89,28 @@
 #         print(f'Você é da categoria master tem mais de 25 anos, idade: {idade} anos')
 
 
-# DESAFIO: Refaça o DESAFIO 35 dos triângulos, acrescentando o recurso de mostrar que tipo de triângulo será formado: – EQUILÁTERO: todos os lados iguais – ISÓSCELES: dois lados iguais, um diferente – ESCALENO: todos os lados diferentes
+# DESAFIO 42:
+# angulo1 = str(input('Coloque "-" para formar um triangulo: '))
+# angulo2 = str(input('Coloque "-" para formar um triangulo: '))
+# angulo3 = str(input('Coloque "-" para formar um triangulo: '))
+# ag1 = len(angulo1)
+# ag2 = len(angulo2)
+# ag3 = len(angulo3)
+# match(ag1, ag2, ag3):
+#     case (i, p, c) if i > 0 and p > 0 and c > 0:
+#         if i == p == c:
+#             print('Com essas medidas você consegue formar um TRIANGULO EQUILATERO')
+#         elif i == p or p == c or c == i:
+#             print('Com essas medidas você consegue formar um TRIANGULO ISÓSCELES')
+#         else:
+#             print('Com essas medidas você consegue formar um TRIANGULO ESCALENO')
+#     case _:
+#         print('Com essas medidas você não consegue formar nenhum tipo de trângulo')
 
-angulo1 = str(input('Coloque "-" para formar um triangulo: '))
-angulo2 = str(input('Coloque "-" para formar um triangulo: '))
-angulo3 = str(input('Coloque "-" para formar um triangulo: '))
 
-ag1 = len(angulo1)
-ag2 = len(angulo2)
-ag3 = len(angulo3)
-match(ag1, ag2, ag3):
-    case (i, p, c) if i > 0 and p > 0 and c > 0:
-        if i == p == c:
-            print('Com essas medidas você consegue formar um TRIANGULO EQUILATERO')
-        elif i == p or p == c or c == i:
-            print('Com essas medidas você consegue formar um TRIANGULO ISÓSCELES')
-        else:
-            print('Com essas medidas você consegue formar um TRIANGULO ESCALENO')
-    case _:
-        print('Com essas medidas você não consegue formar nenhum tipo de trângulo')
+# DESAFIO 43: Desenvolva uma lógica que leia o peso e a altura de uma pessoa, calcule seu Índice de Massa Corporal (IMC) e mostre seu status, de acordo com a tabela abaixo: IMC abaixo de 18,5: Abaixo do Peso – Entre 18,5 e 25: Peso Ideal – 25 até 30: Sobrepeso – 30 até 40: Obesidade – Acima de 40: Obesidade Mórbida
+
+peso = float('Coloque seu peso: ')
+altura = float('Coloque sua altura: ')
+ap = (altura ** 2) / peso
+print(ap)
