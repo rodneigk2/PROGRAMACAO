@@ -98,5 +98,5 @@ angulo3 = str(input('Coloque "-" para formar um triangulo: '))
 ag1 = len(angulo1)
 ag2 = len(angulo2)
 ag3 = len(angulo3)
-if ag1 > 0 and ag2 > 0 and ag3 > 0 and (ag1 + ag2 > ag3) and (ag2 + ag3 > ag1) and (ag3 + ag1 > ag2):
-    print('Você consegue formar um trangulo')
+if ag1 > 0 and ag2 > 0 and ag3 > 0 and (ag1 == ag2 == ag3):
+    print('Você consegue formar um triangulo EQUILATERO')
