@@ -98,5 +98,11 @@ angulo3 = str(input('Coloque "-" para formar um triangulo: '))
 ag1 = len(angulo1)
 ag2 = len(angulo2)
 ag3 = len(angulo3)
-if ag1 > 0 and ag2 > 0 and ag3 > 0 and (ag1 == ag2 == ag3):
-    print('Você consegue formar um triangulo EQUILATERO')
+match(ag1, ag2, ag3):
+    case (i, p, c) if i > 0 and p > 0 and c > 0 and (i == p == c):
+        if i == p == c:
+            print('Com essas medidas você consegue formar um TRIANGULO EQUILATERO')
+        elif i == p or p == c or c == i:
+            print('Com essas medidas você consegue formar um TRIANGULO ISÓSCELES')
+        else:
+            print('Com essas medidas você consegue formar um TRIANGULO ESCALENO')
