@@ -47,3 +47,8 @@ and = todas as condições precisam ser verdadeiras para o resultado ser verdade
 or = basta uma das condições ser verdadeira para o resultado ser verdadeiro, posso especificar quais quero com ().
 
 ==============================================================
+FUNCAO MATCH E CASE
+match "variavel": → Indica qual variável vai ser analisada.
+case padrão: → "caso" não for uma opcâo, vai ser a outra, até achar um com que ela case.
+case _: → Pega qualquer valor que não casou com os anteriores (default).
+ _ : É como se fosse um else.
