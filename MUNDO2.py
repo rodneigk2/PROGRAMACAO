@@ -116,4 +116,4 @@ altura = float(input('Coloque sua altura: '))
 imc = peso / (altura ** 2)
 match imc:
     case i if i < 18.5:
-        Print('Você esta abaixo do peso.')
+        print('Você esta abaixo do peso.')
