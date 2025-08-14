@@ -47,10 +47,8 @@
 #DESAFIO 39: 
 # ano_atual = date.today().year
 # data_nasc = int(input('Coloque seu ano de nascimento: '))
-
 # idade = ano_atual - data_nasc
 # ano_alistamento = data_nasc + 18
-
 # if idade > 18:
 #     atraso = idade - 18
 #     print(f'Você precisa se alistar! Passou {atraso} ano(s) do prazo.')
@@ -90,22 +88,22 @@
 
 
 # DESAFIO 42:
-# angulo1 = str(input('Coloque "-" para formar um triangulo: '))
-# angulo2 = str(input('Coloque "-" para formar um triangulo: '))
-# angulo3 = str(input('Coloque "-" para formar um triangulo: '))
-# ag1 = len(angulo1)
-# ag2 = len(angulo2)
-# ag3 = len(angulo3)
-# match(ag1, ag2, ag3):
-#     case (i, p, c) if i > 0 and p > 0 and c > 0:
-#         if i == p == c:
-#             print('Com essas medidas você consegue formar um TRIANGULO EQUILATERO')
-#         elif i == p or p == c or c == i:
-#             print('Com essas medidas você consegue formar um TRIANGULO ISÓSCELES')
+# lado1 = float(input('Coloque o tamanho do primeiro lado: '))
+# lado2 = float(input('Coloque o tamanho do segundo lado: '))
+# lado3 = float(input('Coloque o tamanho do terceiro lado: '))
+# match lado1, lado2, lado3:
+#     case i, p, c if i > 0 and p > 0 and c > 0:
+#         if i < p + c and p < i + c and c < i + p:
+#             if i == p == c:
+#                 print('Com essas medidas você consegue formar um TRIÂNGULO EQUILÁTERO')
+#             elif i == p or p == c or c == i:
+#                 print('Com essas medidas você consegue formar um TRIÂNGULO ISÓSCELES')
+#             else:
+#                 print('Com essas medidas você consegue formar um TRIÂNGULO ESCALENO')
 #         else:
-#             print('Com essas medidas você consegue formar um TRIANGULO ESCALENO')
+#             print('Com essas medidas você não consegue formar nenhum triângulo')
 #     case _:
-#         print('Com essas medidas você não consegue formar nenhum tipo de trângulo')
+#         print('Lados inválidos. Todos devem ser maiores que zero.')
 
 
 # DESAFIO 43:
@@ -124,26 +122,26 @@
 #     print('Você está com obesidade morbida.')
 
 
-# DESAFIO: Elabore um programa que calcule o valor a ser pago por um produto, considerando o seu preço normal e condição de pagamento: à vista dinheiro/cheque: 10% de desconto – à vista no cartão: 5% de desconto – em até 2x no cartão: preço normal – 3x ou mais no cartão: 20% de juros
+# DESAFIO: 
+# produto = float(input('Coloque o valor a ser pago pelo produto: '))
+# print(' ')
+# escolha = int(input('Escolha a forma de pagamento: \n[1] à vista dinheiro/cheque: 10% de desconto  \n[2] à vista no cartão: 5% de desconto  \n[3] em até 2x no cartão: preço normal  \n[4] 3x ou mais no cartão: 20% de juros \n\nOpção: '))
+# match escolha:
+#     case 1:
+#         desc1 = produto * 0.10
+#         desconto1 = produto - desc1
+#         print(f'Você escolheu a opção [1] (À VISTA/EM DINHEIRO/CHEQUE) \nE ganhou um desconto de R${desc1:.2f}, \nTotalizando valor do produto com desconto em: R${desconto1:.2f}')
+#     case 2:
+#         print(' ')
+#         desc2 = produto * 0.05
+#         desconto2 = produto - desc2
+#         print(f'Você escolheu a opção [2] (À VISTA CARTÃO) \nE ganhou um desconto de R${desc2:.2f}, \nTotalizando valor do produto com desconto em: R${desconto2:.2f}')
+#     case 3: 
+#         print(f'Você escolheu a opção 3 (ATÉ 2X NO CARTÃO), Valor a pagar R${produto:.2f}')
+#     case 4:
+#         acr = produto * 0.20
+#         acrescimo = produto + acr
+#         print(f'Você escolheu a opção 4 (3X OU MAIS NO CARTÃO) \nE teve um acrescimo de R${acr:.2f}, \nTotalizando valor do produto em R${acrescimo:.2f}')
+#     case _:
+#             print(f'Forma de pagamento não encontrada.')
 
-produto = float(input('Coloque o valor a ser pago pelo produto: '))
-escolha = int(input('Escolha a forma de pagamento: [1] à vista dinheiro/cheque: 10% de desconto  [2] à vista no cartão: 5% de desconto  [3] em até 2x no cartão: preço normal  [4] 3x ou mais no cartão: 20% de juros:  '))
-match escolha:
-    case i if i == 1:
-        desc1 = produto * 10
-        desconto1 = produto - desc1
-        print(f'Você escolheu a opção 1 (À VISTA/EM DINHEIRO/CHEQUE), ganhou um desconto de R${desc1:.2f}, totalizando valor do produto com desconto em: R${desconto1:.2f}')
-
-        if i == 2:
-            desc2 = produto * 0.05
-            desconto2 = produto - desc2
-            print(f'Você escolheu a opção 2 (À VISTA NO CARTÃO), ganhou um desconto de ')
-
-        elif i == 3: 
-            print(f'Você escolheu a opção 3 (2X no cartão)')
-
-        elif i == 4:
-            print(f'Você escolhei a opção 4 (3X ou mais no cartão)')
-
-        else:
-            print(f'Forma de pagamento não encontrada.')
