@@ -108,21 +108,42 @@
 #         print('Com essas medidas você não consegue formar nenhum tipo de trângulo')
 
 
-# DESAFIO 43: Desenvolva uma lógica que leia o peso e a altura de uma pessoa, calcule seu Índice de Massa Corporal (IMC) e mostre seu status, de acordo com a tabela abaixo: IMC abaixo de 18,5: Abaixo do Peso – Entre 18,5 e 25: Peso Ideal – 25 até 30: Sobrepeso – 30 até 40: Obesidade – Acima de 40: Obesidade Mórbida
+# DESAFIO 43:
+# peso = float(input('Coloque seu peso: '))
+# altura = float(input('Coloque sua altura: '))
+# imc = peso / (altura ** 2)
+# if imc <= 18.5:
+#     print('Você esta abaixo do peso.')
+# elif imc <= 25:
+#     print('Você esta com o peso ideal.')
+# elif imc <= 30:
+#     print('Você esta com sobrepeso')
+# elif imc <= 40:
+#     print('Você está obeso')
+# else:
+#     print('Você está com obesidade morbida.')
 
-peso = float(input('Coloque seu peso: '))
-altura = float(input('Coloque sua altura: '))
 
-imc = peso / (altura ** 2)
-if imc <= 18.5:
-    print('Você esta abaixo do peso.')
-elif imc <= 25:
-    print('Você esta com o peso ideal.')
-elif imc <= 30:
-    print('Você esta com sobrepeso')
-elif imc <= 40:
-    print('Você está obeso')
-elif imc > 40:
-    print('Você está com obesidade morbida.')
-else:
-    print('IMC não identificada, tente novamente apenas com numeros.')
+# DESAFIO: Elabore um programa que calcule o valor a ser pago por um produto, considerando o seu preço normal e condição de pagamento: à vista dinheiro/cheque: 10% de desconto – à vista no cartão: 5% de desconto – em até 2x no cartão: preço normal – 3x ou mais no cartão: 20% de juros
+
+produto = float(input('Coloque o valor a ser pago pelo produto: '))
+escolha = int(input('Escolha a forma de pagamento: [1] à vista dinheiro/cheque: 10% de desconto  [2] à vista no cartão: 5% de desconto  [3] em até 2x no cartão: preço normal  [4] 3x ou mais no cartão: 20% de juros:  '))
+match escolha:
+    case i if i == 1:
+        desc1 = produto * 10
+        desconto1 = produto - desc1
+        print(f'Você escolheu a opção 1 (À VISTA/EM DINHEIRO/CHEQUE), ganhou um desconto de R${desc1:.2f}, totalizando valor do produto com desconto em: R${desconto1:.2f}')
+
+        if i == 2:
+            desc2 = produto * 0.05
+            desconto2 = produto - desc2
+            print(f'Você escolheu a opção 2 (À VISTA NO CARTÃO), ganhou um desconto de ')
+
+        elif i == 3: 
+            print(f'Você escolheu a opção 3 (2X no cartão)')
+
+        elif i == 4:
+            print(f'Você escolhei a opção 4 (3X ou mais no cartão)')
+
+        else:
+            print(f'Forma de pagamento não encontrada.')
