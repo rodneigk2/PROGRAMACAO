@@ -52,3 +52,5 @@ match "variavel": → Indica qual variável vai ser analisada.
 case padrão: → "caso" não for uma opcâo, vai ser a outra, até achar um com que ela case.
 case _: → Pega qualquer valor que não casou com os anteriores (default).
  _ : → É como se fosse um else.
+     → if e else  são usaveis dentro do match case.
+     
