@@ -99,10 +99,12 @@ ag1 = len(angulo1)
 ag2 = len(angulo2)
 ag3 = len(angulo3)
 match(ag1, ag2, ag3):
-    case (i, p, c) if i > 0 and p > 0 and c > 0 and (i == p == c):
+    case (i, p, c) if i > 0 and p > 0 and c > 0:
         if i == p == c:
             print('Com essas medidas você consegue formar um TRIANGULO EQUILATERO')
         elif i == p or p == c or c == i:
             print('Com essas medidas você consegue formar um TRIANGULO ISÓSCELES')
         else:
             print('Com essas medidas você consegue formar um TRIANGULO ESCALENO')
+    case _:
+        print('Com essas medidas você não consegue formar nenhum tipo de trângulo')
