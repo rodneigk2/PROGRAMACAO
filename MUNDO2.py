@@ -117,3 +117,4 @@ imc = peso / (altura ** 2)
 match imc:
     case i if i < 18.5:
         print('Você esta abaixo do peso.')
+        print('s')
