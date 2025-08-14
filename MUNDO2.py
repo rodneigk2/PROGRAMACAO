@@ -71,22 +71,32 @@
 
 
 #DESAFIO: 
-from datetime import date
-ano_atual = date.today().year
-ano = int(input('Coloque seu ano de nascimento: '))
-data = ano_atual - ano
-idade = data
-match idade:
-    case i if i <= 9:
-        print(f'Você é da categoria mirin, por ter {idade} anos')
-    case i if i <= 14:
-        print(f'Você é da categoria infantil, por ter {idade} anos')
-    case i if i <= 19:
-        print(f'Você é da categoria junior, por ter {idade} anos')
-    case i if i <= 25:
-        print(f'Você é da categoria senior, por ter {idade} anos')
-    case _:
-        print(f'Você é da categoria master tem mais de 25 anos, idade: {idade} anos')
+# from datetime import date
+# ano_atual = date.today().year
+# ano = int(input('Coloque seu ano de nascimento: '))
+# data = ano_atual - ano
+# idade = data
+# match idade:
+#     case i if i <= 9:
+#         print(f'Você é da categoria mirin, por ter {idade} anos')
+#     case i if i <= 14:
+#         print(f'Você é da categoria infantil, por ter {idade} anos')
+#     case i if i <= 19:
+#         print(f'Você é da categoria junior, por ter {idade} anos')
+#     case i if i <= 25:
+#         print(f'Você é da categoria senior, por ter {idade} anos')
+#     case _:
+#         print(f'Você é da categoria master tem mais de 25 anos, idade: {idade} anos')
 
 
-# Exercício Python 42: Refaça o DESAFIO 35 dos triângulos, acrescentando o recurso de mostrar que tipo de triângulo será formado: – EQUILÁTERO: todos os lados iguais – ISÓSCELES: dois lados iguais, um diferente – ESCALENO: todos os lados diferentes
+# DESAFIO: Refaça o DESAFIO 35 dos triângulos, acrescentando o recurso de mostrar que tipo de triângulo será formado: – EQUILÁTERO: todos os lados iguais – ISÓSCELES: dois lados iguais, um diferente – ESCALENO: todos os lados diferentes
+
+angulo1 = str(input('Coloque "-" para formar um triangulo: '))
+angulo2 = str(input('Coloque "-" para formar um triangulo: '))
+angulo3 = str(input('Coloque "-" para formar um triangulo: '))
+
+ag1 = len(angulo1)
+ag2 = len(angulo2)
+ag3 = len(angulo3)
+if ag1 > 0 and ag2 > 0 and ag3 > 0 and (ag1 + ag2 > ag3) and (ag2 + ag3 > ag1) and (ag3 + ag1 > ag2):
+    print('Você consegue formar um trangulo')
