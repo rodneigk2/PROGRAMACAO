@@ -202,6 +202,28 @@
 
 
 #DESAFIO 49: Refaça o DESAFIO 9, mostrando a tabuada de um número que o usuário escolher, só que agora utilizando um laço for.
-usuario = int(input('Coloque um numero para ver sua tabuada: '))
-for c in range(usuario, 11):
-    print(f'{usuario} X {usuario * 1}')
+# usuario = int(input('Coloque um numero para ver sua tabuada: '))
+# tab = 0
+# for c in range(1, 11):
+#     tab += usuario
+#     print(f'{usuario} X {c} = {tab}')
+    
+
+#DESAFIO 50: Desenvolva um programa que leia seis números inteiros e mostre a soma apenas daqueles que forem pares. Se o valor digitado for ímpar, desconsidere-o.
+# soma = 0
+# cont = 0
+# for c in range(6):
+#     n = int(input('Coloque um numero para soma-los: '))
+#     if n % 2 == 0:
+#         soma += n 
+#         cont += 1
+# print(f'Você digitou um total de {cont} numeros e a soma dos pares são de {soma}')
+
+#DESAFIO 51: Desenvolva um programa que leia o primeiro termo e a razão de uma PA. No final, mostre os 10 primeiros termos dessa progressão.
+t = int(input('Coloque o termo para ver sua progressao: '))
+r = int(input('Coloque a razao: '))
+soma = 0
+cont = 0
+for c in range(10):
+    soma += t 
+    cont += r
