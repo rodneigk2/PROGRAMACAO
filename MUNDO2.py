@@ -219,11 +219,21 @@
 #         cont += 1
 # print(f'Você digitou um total de {cont} numeros e a soma dos pares são de {soma}')
 
+
 #DESAFIO 51: Desenvolva um programa que leia o primeiro termo e a razão de uma PA. No final, mostre os 10 primeiros termos dessa progressão.
-t = int(input('Coloque o termo para ver sua progressao: '))
-r = int(input('Coloque a razao: '))
-soma = 0
-cont = 0
-for c in range(10):
-    soma += t 
-    cont += r
+# t = int(input('Coloque o termo para ver sua progressao: '))
+# r = int(input('Coloque a razao: '))
+# soma = 0
+# soma += t
+# print(soma)
+# for c in range(9):
+#     soma += r
+#     print(soma)
+
+
+#DESAFIO 52: Faça um programa que leia um número inteiro e diga se ele é ou não um número primo.
+numero = int(input('Coloque um numero para verifica-lo: '))
+if numero % numero == 0 and numero % 1 == 0:
+    print(f'O numero {numero} que você colocou é primo')
+else:
+    print('O numero que você colocou não é primo')
