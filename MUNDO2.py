@@ -122,7 +122,7 @@
 #     print('Você está com obesidade morbida.')
 
 
-# DESAFIO: 
+# DESAFIO 44: 
 # produto = float(input('Coloque o valor a ser pago pelo produto: '))
 # print(' ')
 # escolha = int(input('Escolha a forma de pagamento: \n[1] à vista dinheiro/cheque: 10% de desconto  \n[2] à vista no cartão: 5% de desconto  \n[3] em até 2x no cartão: preço normal  \n[4] 3x ou mais no cartão: 20% de juros \n\nOpção: '))
@@ -145,3 +145,63 @@
 #     case _:
 #             print(f'Forma de pagamento não encontrada.')
 
+
+#DESAFIO 45: Crie um programa que faça o computador jogar Jokenpô com você.
+# from random import choice
+# print(f'{"VAMOS JOGAR":=^30}')
+# print(' ')
+# jogar = int(input('Escolha uma das opções: [1] PEDRA  [2] PAPEL  [3] TESOURA: \n\nOpção: '))
+# comp = [1, 2, 3]
+# escolhac = choice(comp)
+# if jogar == escolhac:
+#     if escolhac == 1 and escolhac == jogar:
+#         esc1 = 'PEDRA'
+#         print(f'Vocês EMPATARAM, o computador JOGOU {esc1}')
+#     elif escolhac == 2 and escolhac == jogar:
+#         esc2 = 'PAPEL'
+#         print(f'Vocês EMPATARAM, o computador JOGOU {esc2}')
+#     elif escolhac == 3 and escolhac == jogar:
+#         esc3 = 'TESOURA'
+#         print(f'Vocês EMPATARAM, o computador JOGOU {esc3}')
+#     else: print('Opcão não identificada, por favor coloque um numero valido.')
+# elif escolhac == 1 and jogar == 2:
+#     print('Você VENCEU, o computador JOGOU PEDRA')
+# elif escolhac == 1 and jogar == 3:
+#     print('Você PERDEU, o computador JOGOU PEDRA')
+# elif escolhac == 2 and jogar == 1:
+#     print('Você PERDEU, o computador JOGOU PAPEL')
+# elif escolhac == 2 and jogar == 3:
+#     print('Você VENCEU, o computador JOGOU PAPEL')
+# elif escolhac == 3 and jogar == 1:
+#     print('Você VENCEU, o computador JOGOU TESOURA')
+# elif escolhac == 3 and jogar == 2:
+#     print('Você PERDEU, o computador JOGOU TESOURA')
+# else:
+#     print('Opcão não identificada, por favor coloque um numero valido.')
+
+
+# #DESAFIO 46:
+# from time import sleep
+
+# for c in range(10, 0, -1):
+#     print(c) 
+#     sleep(1)
+# print('KATCHAUUUUU')
+
+
+# DESAFIO 47: Crie um programa que mostre na tela todos os números pares que estão no intervalo entre 1 e 50.
+# for c in range(0,50):
+#     if c % 2 == 0:
+#         print(c)
+
+
+#DESAFIO 48: Faça um programa que calcule a soma entre todos os números que são múltiplos de três e que se encontram no intervalo de 1 até 500.
+# for c in range(1, 501):
+#     if c % 3 == 0:
+#         print(c)
+
+
+#DESAFIO 49: Refaça o DESAFIO 9, mostrando a tabuada de um número que o usuário escolher, só que agora utilizando um laço for.
+usuario = int(input('Coloque um numero para ver sua tabuada: '))
+for c in range(usuario, 11):
+    print(f'{usuario} X {usuario * 1}')
