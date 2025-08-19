@@ -11,7 +11,7 @@
 #     print(f'As parcelas ficariam em {mensal}X de R${parcelas:.2f}, seu emprestimo nao foi aprovado pelo banco pois o limite maximo foi escedido, que é 30% (R${prestacao})')
 
 
-#DESAFIO 37: 
+#DESAFIO 37:
 # import time
 # numero = int(input('Escreva um numero: '))
 # time.sleep(1.2)
@@ -33,18 +33,18 @@
 #     print('Numero não identificado! Tente novamente com uma das escolhas acima...')
 
 
-#DESAFIO 38: 
+#DESAFIO 38:
 # numero1 = int(input('Coloque um numero:  '))
 # numero2 = int(input('Coloque outro: '))
-# if numero1 > numero2: 
+# if numero1 > numero2:
 #     print(f'O primeiro numero é maior')
-# elif numero2 > numero1: 
+# elif numero2 > numero1:
 #     print('O segundo numero é maior.')
 # else:
 #     print('Nao existe numero maior, os dois sao iguais')
 
 
-#DESAFIO 39: 
+#DESAFIO 39:
 # ano_atual = date.today().year
 # data_nasc = int(input('Coloque seu ano de nascimento: '))
 # idade = ano_atual - data_nasc
@@ -68,7 +68,7 @@
 # else: print(f'Você tirou {media}, uma nota abaixo da media.')
 
 
-#DESAFIO 41: 
+#DESAFIO 41:
 # from datetime import date
 # ano_atual = date.today().year
 # ano = int(input('Coloque seu ano de nascimento: '))
@@ -122,7 +122,7 @@
 #     print('Você está com obesidade morbida.')
 
 
-# DESAFIO 44: 
+# DESAFIO 44:
 # produto = float(input('Coloque o valor a ser pago pelo produto: '))
 # print(' ')
 # escolha = int(input('Escolha a forma de pagamento: \n[1] à vista dinheiro/cheque: 10% de desconto  \n[2] à vista no cartão: 5% de desconto  \n[3] em até 2x no cartão: preço normal  \n[4] 3x ou mais no cartão: 20% de juros \n\nOpção: '))
@@ -136,7 +136,7 @@
 #         desc2 = produto * 0.05
 #         desconto2 = produto - desc2
 #         print(f'Você escolheu a opção [2] (À VISTA CARTÃO) \nE ganhou um desconto de R${desc2:.2f}, \nTotalizando valor do produto com desconto em: R${desconto2:.2f}')
-#     case 3: 
+#     case 3:
 #         print(f'Você escolheu a opção 3 (ATÉ 2X NO CARTÃO), Valor a pagar R${produto:.2f}')
 #     case 4:
 #         acr = produto * 0.20
@@ -184,7 +184,7 @@
 # from time import sleep
 
 # for c in range(10, 0, -1):
-#     print(c) 
+#     print(c)
 #     sleep(1)
 # print('KATCHAUUUUU')
 
@@ -207,7 +207,7 @@
 # for c in range(1, 11):
 #     tab += usuario
 #     print(f'{usuario} X {c} = {tab}')
-    
+
 
 #DESAFIO 50: Desenvolva um programa que leia seis números inteiros e mostre a soma apenas daqueles que forem pares. Se o valor digitado for ímpar, desconsidere-o.
 # soma = 0
@@ -215,7 +215,7 @@
 # for c in range(6):
 #     n = int(input('Coloque um numero para soma-los: '))
 #     if n % 2 == 0:
-#         soma += n 
+#         soma += n
 #         cont += 1
 # print(f'Você digitou um total de {cont} numeros e a soma dos pares são de {soma}')
 
@@ -262,7 +262,7 @@
 #     idade = ano - ano_nasc
 #     if idade >= 18:
 #         cont +=1
-#     else: 
+#     else:
 #         cont2 += 1
 # print(f'Das datas citadas acima {cont} são maiores de idade, e {cont2} são menores.')
 
@@ -276,7 +276,7 @@
 #     else:
 #         if p > maior:
 #             maior = p
-#         else: 
+#         else:
 #             menor = p
 # print(f'O maior peso é {maior}, e o menor é {menor} ')
 
@@ -306,11 +306,27 @@
 
 
 #DESAFIO 56:  Faça um programa que leia o sexo de uma pessoa, mas só aceite os valores ‘M’ ou ‘F’. Caso esteja errado, peça a digitação novamente até ter um valor correto.
+# sexo = ''
+# while sexo != 'm' and sexo != 'f':
+#     sexo = input('Coloque seu sexo (m/f): ').lower()
+#     if sexo != 'm' and sexo != 'f':
+#             print('Coloque um sexo válido')
+# print('FIM')
 
-sexo = ''
-while sexo != 'm' and sexo != 'f':
-    sexo = input('Coloque seu sexo (m/f): ').lower()
-    if sexo != 'm' and sexo != 'f':
-            print('Coloque um sexo válido')
-print('FIM')
 
+# DESAFIO 57: Melhore o jogo do DESAFIO 28 onde o computador vai “pensar” em um número entre 0 e 10. Só que agora o jogador vai tentar adivinhar até acertar, mostrando no final quantos palpites foram necessários para vencer.
+from random import randint
+computador = randint(1,10)
+jogador = 0
+cont = 0
+while jogador != computador:
+    escolha = input('Escolha um numero: ').lower
+    cont += 1
+    if jogador != computador:
+        escolha = input('Você errou, quer continuar: [S/N] ').lower
+        if escolha == 'n':
+            print(f'Você teve um total de {cont} tentativas.')
+    else:
+        print(f'Você GANHOU, com um total de {cont} tentativas.')
+print('O jogo ACABOU')
+print(computador)
