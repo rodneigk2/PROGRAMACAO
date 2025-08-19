@@ -232,8 +232,36 @@
 
 
 #DESAFIO 52: Faça um programa que leia um número inteiro e diga se ele é ou não um número primo.
-numero = int(input('Coloque um numero para verifica-lo: '))
-if numero % numero == 0 and numero % 1 == 0:
-    print(f'O numero {numero} que você colocou é primo')
-else:
-    print('O numero que você colocou não é primo')
+# n = int(input('Coloque um numero para verifica-lo: '))
+# cont = 0
+# for c in range(1, n+1):
+#     if n % c == 0:
+#         cont += 1
+# if cont == 2:
+#     print('Este numero é primo.')
+# else: print('Esse numero não é primo.')
+
+
+#DESAFIO 53: Crie um programa que leia uma frase qualquer e diga se ela é um palíndromo, desconsiderando os espaços. Exemplos de palíndromos: APÓS A SOPA, A SACADA DA CASA, A TORRE DA DERROTA, O LOBO AMA O BOLO, ANOTARAM A DATA DA MARATONA.
+# palindromo = str(input('Coloque uma frase para verificar se é um palindromo: ')).lower()
+# esp = palindromo.replace(" ", '')
+# inv = esp[::-1]
+# if esp == inv:
+#     print(f'A frase {palindromo} que você colocou é um palindromo. {inv}')
+# else:
+#     print('Essa frase não é um palindromo.')
+
+
+# DESAFIO 54: Crie um programa que leia o ano de nascimento de sete pessoas. No final, mostre quantas pessoas ainda não atingiram a maioridade e quantas já são maiores.
+from datetime import date
+cont = 0
+cont2 = 0
+ano = date.today().year
+for c in range(1,4):
+    ano_nasc = int(input('Coloque seu ano de nascimento: '))
+    idade = ano - ano_nasc
+    if idade >= 18:
+        cont +=1
+    else: 
+        cont2 += 1
+print(f'Das datas citadas acima {cont} são maiores de idade, e {cont2} são menores.')
