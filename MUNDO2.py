@@ -253,15 +253,64 @@
 
 
 # DESAFIO 54: Crie um programa que leia o ano de nascimento de sete pessoas. No final, mostre quantas pessoas ainda não atingiram a maioridade e quantas já são maiores.
-from datetime import date
-cont = 0
-cont2 = 0
-ano = date.today().year
-for c in range(1,4):
-    ano_nasc = int(input('Coloque seu ano de nascimento: '))
-    idade = ano - ano_nasc
-    if idade >= 18:
-        cont +=1
-    else: 
-        cont2 += 1
-print(f'Das datas citadas acima {cont} são maiores de idade, e {cont2} são menores.')
+# from datetime import date
+# cont = 0
+# cont2 = 0
+# ano = date.today().year
+# for c in range(1,4):
+#     ano_nasc = int(input('Coloque seu ano de nascimento: '))
+#     idade = ano - ano_nasc
+#     if idade >= 18:
+#         cont +=1
+#     else: 
+#         cont2 += 1
+# print(f'Das datas citadas acima {cont} são maiores de idade, e {cont2} são menores.')
+
+
+#DESAFIO 55:  Faça um programa que leia o peso de cinco pessoas. No final, mostre qual foi o maior e o menor peso lidos.
+# for c in range(1,6):
+#     p = float(input(f'Coloque o peso da {c} pessoa: '))
+#     if c == 1:
+#         maior = p
+#         menor = p
+#     else:
+#         if p > maior:
+#             maior = p
+#         else: 
+#             menor = p
+# print(f'O maior peso é {maior}, e o menor é {menor} ')
+
+
+#DESAFIO 56: Desenvolva um programa que leia o nome, idade e sexo de 4 pessoas. No final do programa, mostre: a média de idade do grupo, qual é o nome do homem mais velho e quantas mulheres têm menos de 20 anos.
+# ida = 0
+# cont = 0
+# velho = 0
+# nome_velho = ''
+# for p in range(1,6):
+#     nome = str(input('Coloque seu nome: '))
+#     idade = int(input('Coloque sua idade: '))
+#     sexo = str(input('Coloque seu sexo: ')).lower()
+#     ida += idade
+#     if p == 1:
+#         velho = idade
+#     else:
+#          if idade > velho:
+#             velho = idade
+#             nome_velho = nome
+#     if sexo[:1].lower() == 'f':
+#         if idade < 20:
+#             cont += 1
+#     print('=' * 30)
+# ida /= 5
+# print(f'A média entre as idade é de {ida} e o mais velho entre todos é o {nome_velho} e tem {velho} anos e por ultimo temos {cont} mulheres com menos de 20 anos')
+
+
+#DESAFIO 56:  Faça um programa que leia o sexo de uma pessoa, mas só aceite os valores ‘M’ ou ‘F’. Caso esteja errado, peça a digitação novamente até ter um valor correto.
+
+sexo = ''
+while sexo != 'm' and sexo != 'f':
+    sexo = input('Coloque seu sexo (m/f): ').lower()
+    if sexo != 'm' and sexo != 'f':
+            print('Coloque um sexo válido')
+print('FIM')
+
