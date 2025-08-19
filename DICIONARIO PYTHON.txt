@@ -3,10 +3,6 @@ TIPOS PRIMITIVOS:
 - float(): → converte valores para número real (ponto flutuante). Exemplos: 4.5, 0.076, -15.223, 7.0
 - bool(): → converte valores para booleano (True ou False). Útil para verificar condições lógicas. Exemplos: 0, '', None resultam em False; outros valores resultam em True.
 - str(): → converte valores para string (texto). Exemplos: 'olá', '7', '4.0'
-- end = ' ': → Não deixa a linha quebrar para a debaixo.
-- \n: → faz a quebra para a linha de baixo.
-- max: → mostra o valor mais alto dentro duma tupla
-- min: → mostra o valor mais baixo dentro duma tupla
 
 ==============================================================
 TIPOS E MÉTODOS DE VARIÁVEIS
@@ -53,4 +49,21 @@ case padrão: → "caso" não for uma opcâo, vai ser a outra, até achar um com
 case _: → Pega qualquer valor que não casou com os anteriores (default).
  _ : → É como se fosse um else.
      → if e else  são usaveis dentro do match case.
-     
+
+==============================================================
+CONTADORES
+soma += variavel: → acumula valores diferentes em uma só variável (faz um total). Serve para fazer a soma dos valores 
+cont += 1: → só conta +1 a cada vez (não importa o que aconteceu, ele sempre soma 1). Serve para fazer contagem dos valores
+
+==============================================================
+FUNCOES
+- end = ' ': → Não deixa a linha quebrar para a debaixo.
+- \n: → faz a quebra para a linha de baixo.
+- max: → mostra o valor mais alto dentro duma tupla
+- min: → mostra o valor mais baixo dentro duma tupla
+- len(): → é uma função do Python que retorna a quantidade de itens dentro de um objeto. Exemplos: 'abc' = 3, [1, 2, 3] = 3
+- replace(" ", ""): → O método .replace(a, b) substitui tudo que é igual a a por b na string.     
+- "variavel".split(): → divide uma string em uma lista de partes, separando pelo que você escolher (por padrão, espaços).
+- "".join(variavel): → pega uma lista de strings e une tudo em uma única string, colocando entre os elementos o que você especificar (pode ser vazio, espaço, vírgula etc.).
+- .lower(): → serve para fazer a str ficar totalmente em letras minusculas.
+- locals(): → é uma função do Python que retorna um dicionário com todas as variáveis que existem no escopo atual. Entao verificar se uma variável já foi criada ou não.
