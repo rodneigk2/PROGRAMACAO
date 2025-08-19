@@ -52,3 +52,37 @@
 #     case _:
 #         print("10 ou mais")
      
+
+
+usuario = int(input('Coloque um numero para ver sua tabuada: '))
+
+# Aqui a gente cria uma variável chamada tab e começa ela em 0. 
+# Ela vai ser usada como acumulador — ou seja, vamos somando valores nela ao longo do laço.
+tab = 0  
+
+# Esse for cria um contador chamado c. 
+# O range(1, 11) gera os números de 1 até 10 (o último nunca entra).
+# Então o c vai ter esses valores: 1, 2, 3, ..., 10.
+# Cada volta do for é uma “rodada” da tabuada.
+for c in range(1, 11):    
+
+    # O operador += significa "pega o valor atual de tab e soma com usuario".
+    # Como tab começa em 0, a cada volta do for ele vai acumulando o valor de usuario.
+    tab += usuario   
+
+    # O print mostra o número digitado (usuario), o multiplicador (c) e o resultado (tab).
+    print(f'{usuario} X {c} = {tab}')
+
+
+
+soma = 0    # acumulador (vai guardar a soma dos números)
+cont = 0    # contador (vai contar quantos números já foram digitados)
+
+for i in range(5):
+    n = int(input('Digite um número: '))
+    soma += n    # acumula os valores
+    cont += 1    # conta +1 a cada número digitado
+
+print(f'Você digitou {cont} números')
+print(f'A soma deles foi {soma}')
+print(f'A média é {soma / cont}')
