@@ -156,7 +156,7 @@
 # pygame.mixer.music.stop() 
 
 
-#Desafio: Escreva um programa que faca o computador 'pensar' em um numero inteiro entre 0 e 5 e peca para o usuario descobrir qual foi o numero escolhido pelo computador. O programa devera dizer na tela se o usuario venceu ou perdeu.
+#Desafio 28: Escreva um programa que faca o computador 'pensar' em um numero inteiro entre 0 e 5 e peca para o usuario descobrir qual foi o numero escolhido pelo computador. O programa devera dizer na tela se o usuario venceu ou perdeu.
 # import random
 # numero = random.randint(1,10)
 # jogador = int(input('Tente adivinhar o numero: '))
