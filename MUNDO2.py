@@ -324,9 +324,11 @@ while jogador != computador:
     cont += 1
     if jogador != computador:
         escolha = input('Você errou, quer continuar: [S/N] ').lower
+        print = (f'O computador escolheu o numero {computador}')
         if escolha == 'n':
             print(f'Você teve um total de {cont} tentativas.')
     else:
+        print(f'O computador escolheu {computador}.')
         print(f'Você GANHOU, com um total de {cont} tentativas.')
 print('O jogo ACABOU')
-print(computador)
+
