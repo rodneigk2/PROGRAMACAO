@@ -315,20 +315,107 @@
 
 
 # DESAFIO 57: Melhore o jogo do DESAFIO 28 onde o computador vai “pensar” em um número entre 0 e 10. Só que agora o jogador vai tentar adivinhar até acertar, mostrando no final quantos palpites foram necessários para vencer.
-from random import randint
-computador = randint(1,10)
-jogador = 0
-cont = 0
-while jogador != computador:
-    escolha = input('Escolha um numero: ').lower
-    cont += 1
-    if jogador != computador:
-        escolha = input('Você errou, quer continuar: [S/N] ').lower
-        print = (f'O computador escolheu o numero {computador}')
-        if escolha == 'n':
-            print(f'Você teve um total de {cont} tentativas.')
-    else:
-        print(f'O computador escolheu {computador}.')
-        print(f'Você GANHOU, com um total de {cont} tentativas.')
-print('O jogo ACABOU')
+# from random import randint
+# computador = randint(1,10)
+# cont = 1
+# jogador = int(input('Tente adivinhar o numero que o computador pensou, entre 1 a 10: '))
+# while jogador != computador:
+#     print(f'Você errou!')
+#     resposta = input('Tentar novamente: [S/N] ').lower()
+#     if resposta == 'n':
+#         print(f'Você teve um total de {cont} tentativas')
+#         break
+#     elif resposta == 's':
+#         jogador = int(input('Tente adivinhar novamente: '))
+#         cont += 1
+#     else: print('Coloque uma opção valida')
+# else: 
+#     print(f'Você ganhou! Com um total de {cont} tentativas')
+# print('O jogo acabou.')
+
+
+#DESAFIO 59: Crie um programa que leia dois valores e mostre um menu na tela: [ 1 ] somar [ 2 ] multiplicar [ 3 ] maior [ 4 ] novos números [ 5 ] sair do programa. Seu programa deverá realizar a operação solicitada em cada caso.
+# primeiro = int(input('Coloque o primeiro numero: '))
+# segundo = int(input('Coloque o segundo numero: '))
+# escolha = 0
+# print('=' * 30)
+# print(' [1] SOMAR VALORES \n [2] MULTIPLICAR VALORES \n [3] MOSTRAR MAIOR VALOR \n [4] ESCOLHER NOVOS NUMEROS \n [5] SAIR DO PROGRAMA')
+# while escolha != 5:
+#     print('=' * 30)
+#     escolha = int(input('Coloque a opção desejada: '))
+#     if escolha == 1:
+#         soma = primeiro + segundo
+#         print(f'A opção selecionada foi a de SOMA, o resultado é {soma}')
+#         print(' [1] SOMAR VALORES \n [2] MULTIPLICAR VALORES \n [3] MOSTRAR MAIOR VALOR \n [4] ESCOLHER NOVOS NUMEROS \n [5] SAIR DO PROGRAMA')
+#         print(' ')
+#     elif escolha == 2:
+#          multiplicacao = primeiro * segundo
+#          print(f'A opção selecionada foi a de MULTIPLICAÇÃO, o resultado é {multiplicacao}')
+#          print('=' * 30)
+#          print(' [1] SOMAR VALORES \n [2] MULTIPLICAR VALORES \n [3] MOSTRAR MAIOR VALOR \n [4] ESCOLHER NOVOS NUMEROS \n [5] SAIR DO PROGRAMA')
+#          print(' ')
+#     elif escolha == 3: 
+#          if primeiro > segundo:
+#               maior = primeiro
+#          else:
+#               maior = segundo
+#               print(maior)
+#          print(f'A opção selecionada foi a de MOSTRAR O MAIOR, o resultado é {maior}')
+#          print('=' * 30)
+#          print(' [1] SOMAR VALORES \n [2] MULTIPLICAR VALORES \n [3] MOSTRAR MAIOR VALOR \n [4] ESCOLHER NOVOS NUMEROS \n [5] SAIR DO PROGRAMA')
+#          print(' ')
+#     elif escolha == 4:
+#           print('=' * 30)
+#           primeiro = int(input('Coloque o primeiro numero: '))
+#           segundo = int(input('Coloque o segundo numero: '))
+#           continue
+#     elif escolha == 5:
+#          print('PROGRAMA FINALIZADO')
+
+
+#DESAFIO 60: Faça um programa que leia um número qualquer e mostre o seu fatorial. Exemplo: 5! = 5 x 4 x 3 x 2 x 1 = 120
+# numero = int(input('Coloque um numero para ver seu fatorial: '))
+# mult = 1
+# for c in range(1,numero+1):
+#     mult *= c
+#     print(f'{numero} X {c} = {mult}')
+
+
+#DESAFIO 61: Refaça o DESAFIO 51, lendo o primeiro termo e a razão de uma PA, mostrando os 10 primeiros termos da progressão usando a estrutura while.
+# numero = int(input('Coloque um numero para ver sua razão: '))
+# razao = int(input('Coloque a razão: '))
+# c = 0
+# print(f'{numero}')
+# while c != 9:
+#     c += 1
+#     numero += razao 
+#     print(f'{numero}')
+# print('FIM')
+
+
+#DESAFIO 62:  Melhore o DESAFIO 61, perguntando para o usuário se ele quer mostrar mais alguns termos. O programa encerrará quando ele disser que quer mostrar 0 termos.
+
+numero = int(input('Coloque um numero para ver sua razão: '))
+razao = int(input('Coloque a razão: '))
+c = 0
+
+print(f'{numero}')
+
+while c != 9:
+    c += 1
+    numero += razao 
+    
+escolha =  int(input('Quantos termos a mais você quer mostrar: '))
+f = 9 + escolha
+
+
+while escolha != 0:
+    while f != escolha:
+        f += 1
+        numero += razao
+        
+        print(numero)
+print('FIM')
+
+
 
