@@ -395,27 +395,21 @@
 
 #DESAFIO 62:  Melhore o DESAFIO 61, perguntando para o usuário se ele quer mostrar mais alguns termos. O programa encerrará quando ele disser que quer mostrar 0 termos.
 
-numero = int(input('Coloque um numero para ver sua razão: '))
-razao = int(input('Coloque a razão: '))
-c = 0
+# numero = int(input('Coloque o primeiro termo: '))
+# razao = int(input('Coloque a razão: '))
 
-print(f'{numero}')
-
-while c != 9:
-    c += 1
-    numero += razao 
-    
-escolha =  int(input('Quantos termos a mais você quer mostrar: '))
-f = 9 + escolha
-
-
-while escolha != 0:
-    while f != escolha:
-        f += 1
-        numero += razao
-        
-        print(numero)
-print('FIM')
+# c = 0              # contador de termos mostrados
+# total = 10         # começa mostrando 10 termos
+# mais = 1           # só pra entrar no loop
+# while mais != 0:
+#     while c < total:   # mostra os termos até o limite atual
+#         print(numero, end=' ')
+#         numero += razao
+#         c += 1
+#     print()  # quebra de linha
+#     mais = int(input('Quer ver mais quantos termos? '))
+#     total += mais   # soma ao total de termos
+# print('FIM')
 
 
-
+#DESAFIO 63: Escreva um programa que leia um número N inteiro qualquer e mostre na tela os N primeiros elementos de uma Sequência de Fibonacci. Exemplo: 0 – 1 – 1 – 2 – 3 – 5 – 8
