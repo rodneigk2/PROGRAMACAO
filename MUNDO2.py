@@ -413,3 +413,29 @@
 
 
 #DESAFIO 63: Escreva um programa que leia um número N inteiro qualquer e mostre na tela os N primeiros elementos de uma Sequência de Fibonacci. Exemplo: 0 – 1 – 1 – 2 – 3 – 5 – 8
+# n = int(input('Coloque um numero para ver a sua sequencia: '))
+# primeiro = 0
+# segundo = 1
+# c = 0
+# print(primeiro, segundo,  end=' ')
+# while c < n-2:
+#     proximo = segundo + primeiro
+#     print(proximo, end=' ')
+#     primeiro = segundo
+#     segundo = proximo
+#     c += 1
+
+
+#DESAFIO 64: Crie um programa que leia vários números inteiros pelo teclado. O programa só vai parar quando o usuário digitar o valor 999, que é a condição de parada. No final, mostre quantos números foram digitados e qual foi a soma entre eles (desconsiderando o flag).
+
+n = 0
+cont = 0
+soma = 0
+while n != 999:
+    n = int(input('Coloque um numero: ')) 
+    cont += 1
+    soma += n
+    if n == 999:
+        soma -= 999
+print(soma)
+print(cont-1)
