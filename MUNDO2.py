@@ -427,15 +427,138 @@
 
 
 #DESAFIO 64: Crie um programa que leia vários números inteiros pelo teclado. O programa só vai parar quando o usuário digitar o valor 999, que é a condição de parada. No final, mostre quantos números foram digitados e qual foi a soma entre eles (desconsiderando o flag).
+# n = 0
+# cont = 0
+# soma = 0
+# while n != 999:
+#     n = int(input('Coloque um numero: ')) 
+#     cont += 1
+#     soma += n
+#     if n == 999:
+#         soma -= 999
+# print(soma)
+# print(cont-1)
+ 
 
-n = 0
+#DESAFIO 65: Crie um programa que leia vários números inteiros pelo teclado. No final da execução, mostre a média entre todos os valores e qual foi o maior e o menor valores lidos. O programa deve perguntar ao usuário se ele quer ou não continuar a digitar valores.
+# media = 0 
+# continuar = ''
+# maior = 0
+# menor = 0
+# cont = 0
+
+# while continuar != 'n':
+#     n = int(input('Coloque um numero: '))
+#     media += n
+#     cont += 1
+#     if n == 1:
+#         maior = n
+#         menor = n
+#     else:
+#         if n > maior:
+#             maior = n
+#         if n < menor:
+#             menor = n
+#     continuar = input('Quer continuar [S/N]: ').lower()
+#     if continuar != 's' and 'n':
+#         print('Coloque uma opção valida.')
+# print(f'A média entre os numeros foi de {media/cont}')
+# print(f'O maior numero foi {maior} e o menor foi {menor}')
+# print('Fim do programa!')
+
+
+#DESAFIO 66: Crie um programa que leia números inteiros pelo teclado. O programa só vai parar quando o usuário digitar o valor 999, que é a condição de parada. No final, mostre quantos números foram digitados e qual foi a soma entre elas (desconsiderando o flag).
+# n = 0 
+# soma = 0
+# cont = 0
+# while True:
+#     n = int(input('Coloque um numero: '))
+#     if n == 999:
+#         break
+#     cont += 1
+#     soma += n
+# print(f'A soma dos numeros digitados acima é de {soma} e foram digitados {cont} numeros')
+# print('Fim do programa')
+
+
+#DESAFIO 67:  Faça um programa que mostre a tabuada de vários números, um de cada vez, para cada valor digitado pelo usuário. O programa será interrompido quando o número solicitado for negativo.
+# while True:
+#     tabuada = int(input('Coloque um numero para ver sua tabuada: '))
+#     if tabuada < 0:
+#         break
+#     for c in range(1, 11):
+#         print(f'{tabuada} X {c} = {tabuada * c}')
+# print('FIM')
+
+
+#DESAFIO 68: Faça um programa que jogue par ou ímpar com o computador. O jogo só será interrompido quando o jogador perder, mostrando o total de vitórias consecutivas que ele conquistou no final do jogo.
+# from random import randint
+# from time import sleep
+# print('=' * 30)
+# print('VAMOS JOGAR PAR OU IMPAR')
+# print('=' * 30)
+# cont = 0
+# while True:
+#     computador = randint(1,10)
+#     escolha_jogador = input('PAR ou IMPAR: ').upper().strip()
+#     if escolha_jogador != 'PAR' and escolha_jogador != 'IMPAR':
+#         print('Coloque uma opção valida')
+#         print('=' * 30)
+#         continue
+#     jogador = int(input('Coloque um numero: '))
+#     soma = jogador + computador
+#     resultado = 'PAR' if soma % 2 == 0 else 'IMPAR'
+#     print('=' * 30)
+#     if escolha_jogador == resultado:
+#         sleep(1)
+#         print(f'Você ganhou!: {computador} [COMPUTADOR] + {jogador} [JOGADOR] = {soma} [{resultado}]')
+#         print('=' * 30)
+#         cont += 1
+#         sleep(1)
+#         if cont == 1: print(f'Você tem {cont} vitoria')
+#         else: print(f'Você tem {cont} vitorias consecutivas')
+#         print('=' * 30)
+#         sleep(0.5)
+#         print('Vamos jogar novamente!')
+#     else:
+#         sleep(1)
+#         print(f'Você perdeu.: {computador} [COMPUTADOR] + {jogador} [JOGADOR] = {soma} [{resultado}]')
+#         break
+# print('=' * 30)
+# sleep(1)
+# print('FIM DE JOGO')
+# if cont > 1:
+#     print(f'Você ganhou {cont} vezes consecutivas')
+# elif cont == 1:
+#     print('Você ganhou apenas uma vez')
+# else:
+#     print('Você não ganhou nenhuma vez')
+# print('=' * 30)
+
+
+#DESAFIO 69: Crie um programa que leia a idade e o sexo de várias pessoas. A cada pessoa cadastrada, o programa deverá perguntar se o usuário quer ou não continuar. No final, mostre: A) quantas pessoas tem mais de 18 anos. B) quantos homens foram cadastrados. C) quantas mulheres tem menos de 20 anos.
+
 cont = 0
-soma = 0
-while n != 999:
-    n = int(input('Coloque um numero: ')) 
-    cont += 1
-    soma += n
-    if n == 999:
-        soma -= 999
-print(soma)
-print(cont-1)
+contador_masculino = 0
+contador_feminino = 0 
+
+while True: 
+    idade = int(input('Coloque sua idade: '))
+    sexo = input(f'Coloque seu sexo: ').upper().strip()[0]
+    if idade > 18:
+        cont += 1
+    if sexo == 'M':
+        contador_masculino += 1
+    if sexo == 'F' and idade < 20:
+        contador_feminino += 1
+    escolha = input('Quer continuar: ')
+    if escolha == 'N':
+        break
+    elif escolha == 'S':
+        continue
+    else:
+        print('Coloque uma opção valida')
+
+print(f'Foram cadastradas {cont} pessoas com mais de 18 anos')
+print(f'Foram cadastrados {contador_masculino} homens')
+print(f'Foram cadastradas {contador_feminino} mulheres com menos de 20 anos')
