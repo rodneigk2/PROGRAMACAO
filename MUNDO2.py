@@ -537,43 +537,96 @@
 
 
 #DESAFIO 69: Crie um programa que leia a idade e o sexo de várias pessoas. A cada pessoa cadastrada, o programa deverá perguntar se o usuário quer ou não continuar. No final, mostre: A) quantas pessoas tem mais de 18 anos. B) quantos homens foram cadastrados. C) quantas mulheres tem menos de 20 anos.
+# cont = contador_masculino = contador_feminino = feminino_menor = 0
+# while True: 
+#     idade = input('Coloque sua idade: ')
+#     sexo = input(f'Coloque seu sexo: ').upper().strip()[0]
+#     if not idade.isnumeric():
+#         print('Coloque uma opção valida')
+#         continue
+#     idade = int(idade)
+#     if not sexo in ['M','F']:
+#         print('Coloque uma opção valida')
+#         continue
+#     if idade > 18:
+#         cont += 1
+#     if sexo == 'M':
+#         contador_masculino += 1
+#     elif sexo == 'F':
+#         contador_feminino += 1
+#         if idade < 20:
+#             feminino_menor += 1
+#     else:
+#         print('Coloque uma opção valida')
+#         continue    
+#     escolha = str(input('Quer continuar: ')).upper().strip()[0]
+#     if escolha == 'N':
+#         break
+#     elif escolha == 'S':
+#         continue
+#     else:   
+#         print('Coloque uma opção valida')
+#         continue
+# print(f'Foram cadastradas {cont} pessoas com mais de 18 anos')
+# print(f'Foram cadastrados {contador_masculino} homens')
+# print(f'Foram cadastradas {feminino_menor} mulheres com menos de 20 anos')
 
-cont = contador_masculino = contador_feminino = feminino_menor = 0
-while True: 
-    idade = input('Coloque sua idade: ')
-    sexo = input(f'Coloque seu sexo: ').upper().strip()[0]
 
-    if not idade.isnumeric():
-        print('Coloque uma opção valida')
-        continue
-    idade = int(idade)
+#DESAFIO 70:  Crie um programa que leia o nome e o preço de vários produtos. O programa deverá perguntar se o usuário vai continuar ou não. No final, mostre: A) qual é o total gasto na compra. B) quantos produtos custam mais de R$1000. C) qual é o nome do produto mais barato.
+# cont = soma = barato = 0
+# nome_barato = ''
+# while True:
+#     produto = str(input('Coloque o nome do produto: '))
+#     preco = float(input('Coloque o preço do produto: '))
+#     soma += preco
+#     if preco > 1000:
+#         cont += 1
+#     if barato == 0 or preco < barato:
+#         barato = preco
+#         nome_barato = produto
+#     while True:
+#         escolha = str(input('Quer continuar: ')).upper().strip()[0]
 
-    if not sexo in ['M','F']:
-        print('Coloque uma opção valida')
-        continue
+#         if escolha != 'S' and escolha != 'N':
+#             print('Coloque uma opção valida')
+#             continue
+#         else:
+#             break
+#     if escolha == 'N':
+#         break
+# print(f'O total gasto na compra foi de R$ {soma:.2f}')
+# print(f'{cont} produtos custam mais de R$ 1000,00')
+# print(f'O produto mais barato foi o {nome_barato} que custa R$ {barato:.2f}')
+# print('FIM')
 
-    if idade > 18:
-        cont += 1
 
-    if sexo == 'M':
-        contador_masculino += 1
+#DESAFIO 71: Crie um programa que simule o funcionamento de um caixa eletrônico. No início, pergunte ao usuário qual será o valor a ser sacado (número inteiro) e o programa vai informar quantas cédulas de cada valor serão entregues. OBS: considere que o caixa possui cédulas de R$50, R$20, R$10 e R$1.
 
-    elif sexo == 'F':
-        contador_feminino += 1
-        if idade < 20:
-            feminino_menor += 1
+cinquenta = vinte = dez = um = 0
+
+valor = int(input('Coloque o valor a ser sacado: '))
+while True:
+    if valor >= 50:
+        cinquenta += 1
+        valor -= 50
+    elif valor >= 20:
+        vinte += 1
+        valor  -= 20
+    elif valor >= 10:
+        dez += 1
+        valor -=1
+    elif valor >= 1:
+        um += 1
+        valor -= 1
     else:
-        print('Coloque uma opção valida')
-        continue
-        
-    escolha = str(input('Quer continuar: ')).upper().strip()[0]
-    if escolha == 'N':
         break
-    elif escolha == 'S':
-        continue
-    else:   
-        print('Coloque uma opção valida')
-        continue
-print(f'Foram cadastradas {cont} pessoas com mais de 18 anos')
-print(f'Foram cadastrados {contador_masculino} homens')
-print(f'Foram cadastradas {feminino_menor} mulheres com menos de 20 anos')
+
+if valor > 50:
+    print(f'Você recebera {cinquenta} notas de R$50') 
+elif valor > 20:
+    print(f'Você recebera {vinte} notas de R$20')
+elif valor > 10:
+    print(f'Você recebera {dez} notas de R$10')
+elif valor > 1:
+    print(f'Você recebera {um} notas de R$1')
+print('FIM')
