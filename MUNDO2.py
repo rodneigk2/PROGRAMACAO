@@ -601,32 +601,30 @@
 
 
 #DESAFIO 71: Crie um programa que simule o funcionamento de um caixa eletrônico. No início, pergunte ao usuário qual será o valor a ser sacado (número inteiro) e o programa vai informar quantas cédulas de cada valor serão entregues. OBS: considere que o caixa possui cédulas de R$50, R$20, R$10 e R$1.
-
-cinquenta = vinte = dez = um = 0
-
-valor = int(input('Coloque o valor a ser sacado: '))
-while True:
-    if valor >= 50:
-        cinquenta += 1
-        valor -= 50
-    elif valor >= 20:
-        vinte += 1
-        valor  -= 20
-    elif valor >= 10:
-        dez += 1
-        valor -=1
-    elif valor >= 1:
-        um += 1
-        valor -= 1
-    else:
-        break
-
-if valor > 50:
-    print(f'Você recebera {cinquenta} notas de R$50') 
-elif valor > 20:
-    print(f'Você recebera {vinte} notas de R$20')
-elif valor > 10:
-    print(f'Você recebera {dez} notas de R$10')
-elif valor > 1:
-    print(f'Você recebera {um} notas de R$1')
-print('FIM')
+# cinquenta = vinte = dez = um = 0
+# valor = int(input('Coloque o valor a ser sacado: '))
+# valor2 = valor
+# while True:
+#     if valor >= 50:
+#         cinquenta += 1
+#         valor -= 50
+#     elif valor >= 20:
+#         vinte += 1    
+#         valor  -= 20
+#     elif valor >= 10:
+#         dez += 1
+#         valor -=10
+#     elif valor >= 1:
+#         um += 1
+#         valor -= 1
+#     else:
+#         break
+# if cinquenta > 0:
+#     print(f'Você receberá {cinquenta} nota(s) de R$50')
+# if vinte > 0:
+#     print(f'Você receberá {vinte} nota(s) de R$20')
+# if dez > 0:
+#     print(f'Você receberá {dez} nota(s) de R$10')
+# if um > 0:
+#     print(f'Você receberá {um} nota(s) de R$1')
+# print('FIM')
