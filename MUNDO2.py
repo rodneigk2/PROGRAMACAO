@@ -538,27 +538,42 @@
 
 #DESAFIO 69: Crie um programa que leia a idade e o sexo de várias pessoas. A cada pessoa cadastrada, o programa deverá perguntar se o usuário quer ou não continuar. No final, mostre: A) quantas pessoas tem mais de 18 anos. B) quantos homens foram cadastrados. C) quantas mulheres tem menos de 20 anos.
 
-cont = 0
-contador_masculino = 0
-contador_feminino = 0 
-
+cont = contador_masculino = contador_feminino = feminino_menor = 0
 while True: 
-    idade = int(input('Coloque sua idade: '))
+    idade = input('Coloque sua idade: ')
     sexo = input(f'Coloque seu sexo: ').upper().strip()[0]
+
+    if not idade.isnumeric():
+        print('Coloque uma opção valida')
+        continue
+    idade = int(idade)
+
+    if not sexo in ['M','F']:
+        print('Coloque uma opção valida')
+        continue
+
     if idade > 18:
         cont += 1
+
     if sexo == 'M':
         contador_masculino += 1
-    if sexo == 'F' and idade < 20:
+
+    elif sexo == 'F':
         contador_feminino += 1
-    escolha = input('Quer continuar: ')
+        if idade < 20:
+            feminino_menor += 1
+    else:
+        print('Coloque uma opção valida')
+        continue
+        
+    escolha = str(input('Quer continuar: ')).upper().strip()[0]
     if escolha == 'N':
         break
     elif escolha == 'S':
         continue
-    else:
+    else:   
         print('Coloque uma opção valida')
-
+        continue
 print(f'Foram cadastradas {cont} pessoas com mais de 18 anos')
 print(f'Foram cadastrados {contador_masculino} homens')
-print(f'Foram cadastradas {contador_feminino} mulheres com menos de 20 anos')
+print(f'Foram cadastradas {feminino_menor} mulheres com menos de 20 anos')
