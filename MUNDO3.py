@@ -64,9 +64,26 @@
 #     print(f'{quarto}',end=' ')  
 
 #DESAFIO 76: Crie um programa que tenha uma tupla única com nomes de produtos e seus respectivos preços, na sequência. No final, mostre uma listagem de preços, organizando os dados em forma tabular.
+# produtos = ('Lápis', 2.00, 'caneta', 2.50, 'cola', 5.00 )
+# print('-' * 30)
+# print(f'{"LISTAGEM DE PREÇOS":^30}')
+# print('-' * 30)
+# print(' ')
+# for i in range(0, len(produtos)):
+#     if i % 2 == 0:
+#         print(f'{produtos[i]:.<30}', end='R$ ')
+#     else:
+#         print(f'{produtos[i]}')
 
-produtos = ('Lápis', 2.00, 'caneta', 2.50, 'cola', 5.00 )
-nome = produtos[0], produtos[2], produtos[4]
-preco = produtos[1], produtos[3], produtos[5]
+# print(' ')
+# print('-' * 30)
 
-print(f'{nome:<10} R$ {preco:>5.2f}')
+
+#DESAFIO 77: Crie um programa que tenha uma tupla com várias palavras (não usar acentos). Depois disso, você deve mostrar, para cada palavra, quais são as suas vogais.
+palavras = ('Programaçao', 'Hello World', 'Python', 'Anoes Pelados')
+
+for p in palavras:
+    print(f'\nNa palavra {p} temos ', end=' ')
+    for letra in p:
+        if letra.lower() in 'aeiou':
+            print(letra, end=' ')
