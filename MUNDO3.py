@@ -46,7 +46,6 @@
 #     else:
 #         quarto = valores
 # tupla = (primeiro, segundo, terceiro, quarto)
-
 # print(tupla,end=' ')
 # print(f'\nO valor 9 apareceu {tupla.count(9)} vezes')
 # if 3 in tupla:
@@ -62,6 +61,7 @@
 #     print(f'{terceiro}',end=' ')
 # if quarto % 2 == 0:
 #     print(f'{quarto}',end=' ')  
+
 
 #DESAFIO 76: Crie um programa que tenha uma tupla única com nomes de produtos e seus respectivos preços, na sequência. No final, mostre uma listagem de preços, organizando os dados em forma tabular.
 # produtos = ('Lápis', 2.00, 'caneta', 2.50, 'cola', 5.00 )
@@ -80,12 +80,29 @@
 
 
 #DESAFIO 77: Crie um programa que tenha uma tupla com várias palavras (não usar acentos). Depois disso, você deve mostrar, para cada palavra, quais são as suas vogais.
-palavras = ('Programaçao', 'Hello World', 'Python', 'Anoes Pelados')
-for p in palavras:
-    print(f'\nNa palavra {p} temos ', end=' ')
-    for letra in p:
-        if letra.lower() in 'aeiou':
-            print(letra, end=' ')
+# palavras = ('Programaçao', 'Hello World', 'Python', 'Anoes Pelados')
+# for p in palavras:
+#     print(f'\nNa palavra {p} temos ', end=' ')
+#     for l in p:
+#         if l.lower() in 'aeiou':
+#             print(l, end=' ')
 
 
-#DESAFIO 78:
+#DESAFIO 78: Faça um programa que leia 5 valores numéricos e guarde-os em uma lista. No final, mostre qual foi o maior e o menor valor digitado e as suas respectivas posições na lista.
+# values = []
+# for i in range(0,5):
+#     num = int(input(f'Input one value for position: '))
+#     values.append(num)
+#     if i == 0:
+#         greater = num
+#         lesser = num
+#     else:
+#         if num > greater:
+#             greater = num
+#         elif num < lesser:
+#             lesser = num     
+# print(f'{greater} is the greater value and your position is {values.index(greater)}')
+# print(f'{lesser} is the lesser value and your position is {values.index(lesser)}')
+
+
+#DESAFIO 79: Crie um programa onde o usuário possa digitar vários valores numéricos e cadastre-os em uma lista. Caso o número já exista lá dentro, ele não será adicionado. No final, serão exibidos todos os valores únicos digitados, em ordem crescente.
