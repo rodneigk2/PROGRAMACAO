@@ -142,26 +142,26 @@
 
 
 #DESAFIO 81:  Crie um programa que vai ler vários números e colocar em uma lista. Depois disso, mostre:  A) Quantos números foram digitados.  B) A lista de valores, ordenada de forma decrescente. C) Se o valor 5 foi digitado e está ou não na lista.
+# list_numbers = []
+# cont = 0
+# while True:
+#     choice_user = int(input('Imput a number: '))
+#     cont += 1
+#     list_numbers.append(choice_user)
+#     user_choice = input('Do you want continue: [Y/N]: ').lower()
+#     if user_choice == 'n':
+#         break
+#     elif user_choice == 'y':
+#         continue
+#     else:
+#         while user_choice != 'n' and user_choice != 'y':
+#             user_choice = input('Do you want continue: [Y/N]: ').lower()
+# print(cont)
+# print(sorted(list_numbers, reverse=True))
+# if 5 in list_numbers:
+#     print(f'Have the number five in the list')
+# else:
+#     print('Dont have the number five in the list.')
 
-list_numbers = []
-cont = 0
-while True:
-    choice_user = int(input('Imput a number: '))
-    cont += 1
-    list_numbers.append(choice_user)
-    user_choice = input('Do you want continue: [Y/N]: ').lower()
-    if user_choice == 'n':
-        break
-    elif user_choice == 'y':
-        continue
-    else:
-        while user_choice != 'n' and user_choice != 'y':
-            user_choice = input('Do you want continue: [Y/N]: ').lower()
 
-print(cont)
-print(sorted(list_numbers, reverse=True))
-
-if 5 in list_numbers:
-    print(f'Have the number five in the list')
-else:
-    print('Dont have the number five in the list.')
+#DESAFIO 82: Crie um programa que vai ler vários números e colocar em uma lista. Depois disso, crie duas listas extras que vão conter apenas os valores pares e os valores ímpares digitados, respectivamente. Ao final, mostre o conteúdo das três listas geradas.
