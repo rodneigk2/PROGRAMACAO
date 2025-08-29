@@ -106,3 +106,62 @@
 
 
 #DESAFIO 79: Crie um programa onde o usuário possa digitar vários valores numéricos e cadastre-os em uma lista. Caso o número já exista lá dentro, ele não será adicionado. No final, serão exibidos todos os valores únicos digitados, em ordem crescente.
+# list_numbers = []
+# while True:
+#     choice_user = int(input('Imput a number: '))
+#     if choice_user in list_numbers:
+#         list_numbers.remove(choice_user)
+#     else:
+#         list_numbers.append(choice_user)
+#     cont = input('Do you want continue: [Y/N]: ').lower()[0]
+#     if cont == 'n':
+#         break
+#     elif cont == 'y':
+#         continue
+#     else:
+#         while cont != 'n' and cont != 'y':
+#             cont = input('Do you want continue: [Y/N]: ').lower()[0]
+# list_numbers.sort()
+# print(list_numbers)
+
+
+#DESAFIO 80: Crie um programa onde o usuário possa digitar cinco valores numéricos e cadastre-os em uma lista, já na posição correta de inserção (sem usar o sort()). No final, mostre a lista ordenada na tela.
+# numbers = [] 
+# for i in range(5):
+#     num = int(input("Enter a number: "))
+#     if len(numbers) == 0:
+#         numbers.append(num)
+#     else:
+#         position = 0
+#         while position < len(numbers):
+#             if num <= numbers[position]:
+#                 break
+#             position += 1
+#         numbers.insert(position, num)
+#print("Ordered list:", numbers)
+
+
+#DESAFIO 81:  Crie um programa que vai ler vários números e colocar em uma lista. Depois disso, mostre:  A) Quantos números foram digitados.  B) A lista de valores, ordenada de forma decrescente. C) Se o valor 5 foi digitado e está ou não na lista.
+
+list_numbers = []
+cont = 0
+while True:
+    choice_user = int(input('Imput a number: '))
+    cont += 1
+    list_numbers.append(choice_user)
+    user_choice = input('Do you want continue: [Y/N]: ').lower()
+    if user_choice == 'n':
+        break
+    elif user_choice == 'y':
+        continue
+    else:
+        while user_choice != 'n' and user_choice != 'y':
+            user_choice = input('Do you want continue: [Y/N]: ').lower()
+
+print(cont)
+print(sorted(list_numbers, reverse=True))
+
+if 5 in list_numbers:
+    print(f'Have the number five in the list')
+else:
+    print('Dont have the number five in the list.')
